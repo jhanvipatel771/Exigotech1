@@ -1,0 +1,92 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+
+    form {
+        height: auto;
+        width: 400px;
+        background-color: rgba(255,255,255,0.13);
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.1);
+        box-shadow: 0 0 40px rgba(8,7,16,0.6);
+        padding: 50px 35px;
+    }
+
+        form * {
+            font-family: 'Poppins',sans-serif;
+            color: black;
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+
+        form h3 {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 42px;
+            text-align: center;
+        }
+
+        input,
+        .btn {
+          width: 100%;
+          padding: 12px;
+          border: none;
+          border-radius: 4px;
+          margin: 5px 0;
+          opacity: 0.85;
+          display: inline-block;
+          font-size: 17px;
+          line-height: 20px;
+          text-decoration: none; /* remove underline from anchors */
+        }
+
+        input:hover,
+        .btn:hover,
+        .fa-user,
+        .fa-user-cog{
+          opacity: 1;
+        }
+
+        .google {
+          background-color: Black;
+          color: white;
+          margin-top:40px;
+          text-align:center;
+        }
+
+        @*@media screen and (max-width: 650px) {
+          .col{
+                    width: 100%;
+                    margin-top: 0;
+                }
+          /* hide the vertical line */
+          .vl {
+            display: none;
+          }*@
+
+</style>
+
+<form>
+    <img src="~/Content/Images/exigot.png" style="height: 130px; width: 130px; margin-left: 99px;" />
+    <a asp-area="" asp-controller="Home" asp-action="Login" class="google btn" style="background-color:black;">
+        <i class="fa fa-user" style="color:white;">
+        </i> EMPLOYEE
+    </a>
+    <a asp-area="" asp-controller="Home" asp-action="Admin" class="google btn" style="background-color:black;">
+        <i class="fa fa-user-cog" style="color:white;">
+        </i> ADMIN
+    </a>
+
+   
+
+</form>
+
